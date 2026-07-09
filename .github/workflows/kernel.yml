@@ -189,6 +189,11 @@ jobs:
             done
           done
 
+      - name: Fix script permissions
+        id: fix-permission
+        run: find ${{ github.workspace }}/Redmi2/scripts -name "*.sh" -exec chmod +x {} \;
+        
+
       - name: 😎 Set build args
         id: generate-args
         env:
