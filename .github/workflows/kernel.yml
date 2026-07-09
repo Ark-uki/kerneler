@@ -193,7 +193,7 @@ jobs:
         id: fix-permission
         run: | 
           find ${{ github.workspace }}/Redmi2/scripts -name "*.sh" -exec chmod +x {} \;
-          chmod a+x /home/runner/work/kerneler/kerneler/Redmi2/scripts/.
+          chmod -R a+rwx /home/runner/work/kerneler/kerneler/Redmi2/scripts/
         
 
       - name: 😎 Set build args
